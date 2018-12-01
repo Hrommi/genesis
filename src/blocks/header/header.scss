@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: rem(22px) 0;
-  
+
   @media (min-width: $screen-lg) {
     padding: rem(44px) 0;
   }
@@ -24,14 +24,14 @@
   &__item {
     @include col();
     flex: none;
-    
+
     &--logo {
       margin-right: auto;
     }
 
     &--main-nav {
       display: none;
-      
+
       @media (min-width: $screen-lg) {
         display: block;
       }
@@ -40,7 +40,7 @@
         display: block;
         order: 1;
         margin-top: rem(24px);
-        
+
         @media (min-width: $screen-lg) {
           order: 0;
           margin-top: 0;

@@ -40,7 +40,6 @@ let styleImports = styleFileMsg;
 lists.css.forEach(function(blockPath) {
   styleImports += '@import \''+blockPath+'\';\n';
 });
-styleImports = styleImports += styleFileMsg;
 fs.writeFileSync(dirs.srcPath + 'scss/style.scss', styleImports);
 
 // Формирование и запись списка примесей (mixins.pug) со списком инклудов всех pug-файлов блоков

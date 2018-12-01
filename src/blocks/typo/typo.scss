@@ -103,7 +103,7 @@ h6 {
 h1 {
   /* font-size: #{(($font-size--h1 / ($font-size--h1 * 0 + 1)) * $font-size--root)}; */
   font-size: $font-size--h1;
-  
+
   @media (min-width: $screen-md) {
     font-size: $font-size--h1-large;
   }
@@ -113,7 +113,7 @@ h1 {
 h2 {
   /* font-size: #{(($font-size--h2 / ($font-size--h2 * 0 + 1)) * $font-size--root)}; */
   font-size: $font-size--h2;
-  
+
   @media (min-width: $screen-md) {
     font-size: $font-size--h2-large;
   }
@@ -123,7 +123,7 @@ h2 {
 h3 {
   /* font-size: #{(($font-size--h3 / ($font-size--h3 * 0 + 1)) * $font-size--root)}; */
   font-size: $font-size--h3;
-  
+
   @media (min-width: $screen-md) {
     font-size: $font-size--h3-large;
   }
@@ -133,7 +133,7 @@ h3 {
 h4 {
   /* font-size: #{(($font-size--h4 / ($font-size--h4 * 0 + 1)) * $font-size--root)}; */
   font-size: $font-size--h4;
-  
+
   @media (min-width: $screen-md) {
     font-size: $font-size--h4-large;
   }
@@ -143,7 +143,7 @@ h4 {
 h5 {
   /* font-size: #{(($font-size--h5 / ($font-size--h5 * 0 + 1)) * $font-size--root)}; */
   font-size: $font-size--h5;
-  
+
   @media (min-width: $screen-md) {
     font-size: $font-size--h5-large;
   }
@@ -153,7 +153,7 @@ h5 {
 h6 {
   /* font-size: #{(($font-size--h6 / ($font-size--h6 * 0 + 1)) * $font-size--root)}; */
   font-size: $font-size--h6;
-  
+
   @media (min-width: $screen-md) {
     font-size: $font-size--h6-large;
   }

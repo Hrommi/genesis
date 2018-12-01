@@ -14,10 +14,10 @@
 
   &__item {
     margin: rem(16px) rem(8px) 0;
-    
+
     &--visible-sm-up {
       display: none;
-      
+
       @media (min-width: $screen-md) {
         display: block;
       }
@@ -25,7 +25,7 @@
   }
 
   &--centered {
-    
+
     #{$block-name}__container {
       justify-content: center;
     }
@@ -34,6 +34,7 @@
   &--md-started {
 
     @media (min-width: $screen-md) {
+
       #{$block-name}__container {
         justify-content: flex-start;
       }
@@ -43,6 +44,7 @@
   &--md-ended {
 
     @media (min-width: $screen-md) {
+
       #{$block-name}__container {
         justify-content: flex-end;
       }
@@ -52,6 +54,7 @@
   &--md-betweened {
 
     @media (min-width: $screen-md) {
+
       #{$block-name}__container {
         justify-content: space-between;
       }

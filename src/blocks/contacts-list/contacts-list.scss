@@ -21,7 +21,7 @@
   }
 
   &--column {
-    
+
     #{$block-name}__item {
       @include col(md, 12);
       @include col(lg, 12);

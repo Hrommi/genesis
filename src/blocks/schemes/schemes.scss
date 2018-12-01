@@ -8,7 +8,7 @@
 
   &__heading + &__text {
     margin-top: rem(-16px);
-    
+
     @media (min-width: $screen-md) {
       margin-top: rem(-24px);
     }

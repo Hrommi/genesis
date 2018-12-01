@@ -74,7 +74,7 @@ $z-index-modal:               100 !default;
   &__header {
     padding: rem(38px) rem(32px) 0;
     flex-shrink: 0;
-    
+
     @media (min-width: $screen-md) {
       padding: rem(52px) rem(84px) 0;
     }
@@ -82,7 +82,7 @@ $z-index-modal:               100 !default;
 
   &__heading {
     position: relative;
-    
+
     &:before {
       content: '';
       display: inline-block;
@@ -91,12 +91,12 @@ $z-index-modal:               100 !default;
       margin-right: rem(16px);
       border-radius: 50%;
       background-color: $text-color;
-      
+
       @media (min-width: $screen-md) {
         position: absolute;
         left: rem(-40px);
         top: 50%;
-        transform: translate(0, -50%)
+        transform: translate(0, -50%);
       }
     }
   }
@@ -105,7 +105,7 @@ $z-index-modal:               100 !default;
     position: absolute !important; // stylelint-disable-line  declaration-no-important
     top: rem(16px);
     right: rem(16px);
-    
+
     @media (min-width: $screen-md) {
       top: rem(28px);
       right: rem(28px);
@@ -115,7 +115,7 @@ $z-index-modal:               100 !default;
   &__body {
     padding: rem(24px) rem(32px);
     flex-grow: 1;
-    
+
     @media (min-width: $screen-md) {
       padding: rem(32px) rem(84px);
     }
@@ -124,7 +124,7 @@ $z-index-modal:               100 !default;
   &__footer {
     padding: 0 rem(32px) rem(40px);
     flex-shrink: 0;
-    
+
     @media (min-width: $screen-md) {
       padding: 0 rem(84px) rem(64px);
     }

@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   &__container {
-    
+
     @media (min-width: $screen-md) {
       width: 50%;
       margin-left: auto;
@@ -20,6 +20,7 @@
   }
 
   &__heading {
+
     @media (min-width: $screen-md) {
       font-size: rem(40px);
     }

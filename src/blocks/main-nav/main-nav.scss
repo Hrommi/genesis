@@ -16,7 +16,7 @@
 
   &__item {
     margin: rem(4px) rem(16px);
-    
+
     @media (min-width: $screen-xl) {
       margin: rem(4px) rem(24px);
     }
@@ -27,7 +27,7 @@
     color: #93a8d7;
     text-decoration: none;
     outline: none;
-    
+
     &:hover,
     &:focus {
       color: $text-color--invert;

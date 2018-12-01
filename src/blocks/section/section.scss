@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: rem(50px) 0 rem(64px);
-  
+
   @media (min-width: $screen-md) {
     padding-top: rem(72px);
     padding-bottom: rem(86px);
@@ -15,11 +15,11 @@
 
   &__inner {
     @include container();
-    
+
     &--full-width {
       padding-left: rem(10px);
       padding-right: rem(10px);
-      
+
       @media (min-width: $screen-md) {
         padding-left: 0;
         padding-right: 0;
@@ -30,7 +30,7 @@
   &--hero {
     padding-top: rem(16px);
     padding-bottom: rem(160px);
-    
+
     @media (min-width: $screen-md) {
       padding-top: rem(60px);
       padding-bottom: rem(240px);
@@ -48,7 +48,7 @@
     background-position: right top, left center, right bottom;
     background-repeat: no-repeat, no-repeat, no-repeat;
     color: $text-color--invert;
-    
+
     @media (min-width: $screen-md) {
       background-image: url(../img/conditions--desktop--back-full.png);
       background-position: center center;
@@ -64,7 +64,7 @@
   &--photos {
     background-color: $body-bg--dark;
     color: $text-color--invert;
-    
+
     @media (min-width: $screen-md) {
       background-image: url(../img/conditions--desktop--back-full.png);
       background-position: center center;

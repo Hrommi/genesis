@@ -21,7 +21,6 @@
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
-  text-transform: none;
   color: $text-color--invert;
   text-transform: uppercase;
   border-radius: $border-radius;
@@ -164,12 +163,4 @@
       }
     }
   }
-
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
-
-
-
 }

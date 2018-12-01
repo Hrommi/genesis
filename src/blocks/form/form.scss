@@ -36,21 +36,21 @@ $line-height:                 1.5 !default;
   &--row {
     @include row($grid-gutter-width, $grid-gutter-width, $grid-gutter-width, $grid-gutter-width, $grid-gutter-width * 1.5);
     align-items: flex-end;
-    
+
     #{$block-name}__fieldset {
       @include col();
-      
+
       &--user {
         @include col(md, 6, $grid-columns, $grid-gutter-width);
         @include col(lg, 4, $grid-columns, $grid-gutter-width * 1.5);
       }
-      
+
       &--message {
         @include col(md, 6, $grid-columns, $grid-gutter-width);
         @include col(lg, 8, $grid-columns, $grid-gutter-width * 1.5);
       }
     }
-    
+
     #{$block-name}__field-actions {
       flex: 0 0 100%;
       min-width: 100%;

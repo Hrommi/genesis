@@ -9,21 +9,21 @@
   &__row {
     padding: rem(12px) 0;
     border-bottom: 1px solid $gray-lighten;
-    
+
     @media (min-width: $screen-md) {
       display: flex;
     }
-    
+
     &:last-child {
       border-bottom: none;
     }
   }
 
   &__cell {
-    
+
     &--title {
       font-weight: 700;
-      
+
       @media (min-width: $screen-md) {
         flex: 0 0 rem(300px);
         min-width: rem(300px);
@@ -33,7 +33,7 @@
 
     br {
       display: none;
-      
+
       @media (min-width: $screen-md) {
         display: inline;
       }

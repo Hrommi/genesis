@@ -20,12 +20,12 @@
   transition: all $transition-time;
   opacity: $opacity;
   color: $text-color--muted;
-  
+
   @media (min-width: $screen-md) {
     width: rem(20px);
     line-height: rem(20px);
   }
-  
+
   &:hover {
     color: $color-blue;
     opacity: 1;

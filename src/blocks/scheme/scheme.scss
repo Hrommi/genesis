@@ -8,7 +8,7 @@
 
   display: flex;
   align-items: flex-start;
-  
+
   @media (min-width: $screen-xl) {
     position: relative;
     display: block;
@@ -46,14 +46,14 @@
     color: $text-color--muted;
     opacity: $opacity;
     transition: all $transition-time;
-    
+
     @media (min-width: $screen-xl) {
       margin: 0 0 rem(12px) 0;
       opacity: 1;
     }
 
     &--message {
-      
+
       @media (min-width: $screen-xl) {
         flex: 0 0 rem(60px);
         min-width: rem(60px);
@@ -71,7 +71,7 @@
   }
 
   &__content {
-    
+
     @media (min-width: $screen-xl) {
       max-width: rem(152px);
     }
@@ -79,7 +79,7 @@
 
   &__message {
     display: none;
-    
+
     @media (min-width: $screen-xl) {
       position: absolute;
       left: -100px;
@@ -92,37 +92,37 @@
       box-shadow: $shadow--smaller;
       opacity: 0;
       animation: show-scheme-message $transition-time cubic-bezier(0, 0, 0.2, 1);
-      
+
       #{$block-name}--first & {
         left: 0;
       }
-      
+
       #{$block-name}--last & {
         left: auto;
         right: 0;
       }
-      
+
       #{$block-name}--active & {
         display: flex;
         opacity: 1;
       }
-      
+
       &:after {
         content: '';
         display: block;
         position: absolute;
         left: rem(136px);
         bottom: 100%;
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-left: rem(14px) solid transparent;
         border-right: rem(14px) solid transparent;
         border-bottom: rem(14px) solid $body-bg;
-        
+
         #{$block-name}--first & {
           left: rem(52px);
         }
-        
+
         #{$block-name}--last & {
           left: auto;
           right: rem(92px);
@@ -134,9 +134,11 @@
 
 
 @keyframes show-scheme-message {
+
   0% {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

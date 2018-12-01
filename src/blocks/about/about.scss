@@ -12,7 +12,7 @@
     background-color: $body-bg;
     border-radius: $border-radius;
     box-shadow: $shadow;
-    
+
     @media (min-width: $screen-md) {
       margin-top: rem(-30px);
       padding: rem(60px) rem(60px) rem(64px);
@@ -23,7 +23,7 @@
       background-position: right top;
       background-repeat: no-repeat;
     }
-    
+
     @media (min-width: $screen-xxl) {
       margin-left: rem(-56px);
       margin-right: rem(-56px);
@@ -33,7 +33,7 @@
   }
 
   &__item {
-    
+
     @media (min-width: $screen-lg) {
       max-width: 46%;
     }

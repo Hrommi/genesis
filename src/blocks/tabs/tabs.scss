@@ -40,7 +40,7 @@
     }
 
     &--open {
-      
+
       #{$block-name}__link-wrap {
         display: block;
       }
@@ -49,7 +49,7 @@
 
   &__link-wrap {
     display: none;
-      
+
     @media (min-width: $screen-md) {
       display: block;
       order: 0;
@@ -61,7 +61,7 @@
       display: block;
       order: -1;
       border-bottom: 2px solid $color-main--light;
-      
+
       @media (min-width: $screen-md) {
         border-color: $color-main;
       }
@@ -86,7 +86,7 @@
     font-size: $font-size--large;
     font-weight: 700;
     transition: all $transition-time;
-    
+
     @media (min-width: $screen-md) {
       padding: rem(16px) rem(20px);
     }
@@ -102,7 +102,7 @@
     margin-left: rem(16px);
     color: $color-main !important;
     opacity: 1;
-    
+
     @media (min-width: $screen-md) {
       display: none !important;
     }
@@ -135,7 +135,7 @@
     #{$block-name}__links {
 
       &:after {
-        
+
         @media (min-width: $screen-md) {
           left: -999rem;
           right: -999rem;

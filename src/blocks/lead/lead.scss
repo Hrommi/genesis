@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   font-size: rem(20px);
-  
+
   @media (min-width: $screen-md) {
     font-size: rem(24px);
   }

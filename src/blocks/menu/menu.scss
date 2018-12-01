@@ -10,7 +10,7 @@
   padding-top: rem(8px);
   padding-bottom: rem(36px);
   color: $text-color--invert;
-  
+
   @media (min-width: $screen-md) {
     padding-bottom: rem(48px);
   }
@@ -21,17 +21,18 @@
 
   &__container {
     @include row();
-     margin-top: rem(-40px);
+    margin-top: rem(-40px);
   }
+
   &__item {
     @include col();
     margin-top: rem(40px);
-    
+
     &--contact {
       @include col(md, 4);
       @include col(lg, 3);
     }
-    
+
     &--form {
       @include col(md, 8);
       @include col(lg, 9);
@@ -40,7 +41,6 @@
 }
 
 .menu-opened {
-
   overflow: hidden;
 
   .menu {
@@ -56,5 +56,4 @@
     background: $menu-bg;
     overflow: auto;
   }
-  
 }

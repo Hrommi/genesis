@@ -12,28 +12,28 @@
   border-radius: $border-radius;
   box-shadow: $shadow--small;
   transition: all $transition-time;
-  
+
   @media (min-width: $screen-md) {
     width: rem(556px);
     padding: rem(60px) rem(84px) rem(64px);
     box-shadow: none;
-    
+
     .center & {
       box-shadow: $shadow--small;
     }
   }
-  
+
   &__content {
     margin-bottom: rem(14px);
-    
-  @media (min-width: $screen-md) {
+
+    @media (min-width: $screen-md) {
       margin-bottom: rem(34px);
     }
   }
-  
+
   &__title {
     margin-bottom: rem(18px);
-    
+
     &:before {
       content: '';
       display: inline-block;
@@ -42,7 +42,7 @@
       margin-right: rem(16px);
       border-radius: 50%;
       background-color: $text-color;
-      
+
       @media (min-width: $screen-md) {
         position: absolute;
         left: rem(40px);
@@ -50,18 +50,18 @@
       }
     }
   }
-  
+
   &__text {
     margin-bottom: rem(14px);
   }
 
   &__footer {
-    
+
     @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
+
       > * {
         margin: 0;
       }
@@ -74,7 +74,7 @@
   }
 
   &__buttons-group {
-    
+
     @media (min-width: $screen-md) {
       order: -1;
     }

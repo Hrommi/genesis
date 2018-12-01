@@ -9,25 +9,25 @@
   padding: rem(38px) rem(32px) rem(40px);
   background: $menu-bg--light;
   border-radius: rem(10px);
-  
+
   @media (min-width: $screen-md) {
     padding: rem(60px) rem(84px) rem(64px);
   }
-  
+
   &__heading {
-    
+
     @media (min-width: $screen-md) {
       max-width: rem(292px);
     }
   }
-  
+
   &__text {
     color: $text-color--menu;
   }
 
   &__heading + &__text {
     margin-top: rem(-16px);
-    
+
     @media (min-width: $screen-md) {
       margin-top: rem(-24px);
     }

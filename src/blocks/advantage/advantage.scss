@@ -35,14 +35,14 @@
   }
 
   &--blue {
-    
+
     #{$block-name}__icon {
-      background: $body-blue
+      background: $body-blue;
     }
   }
 
   &--orange {
-    
+
     #{$block-name}__icon {
       background: $body-orange;
     }

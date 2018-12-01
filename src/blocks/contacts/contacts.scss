@@ -12,7 +12,7 @@
     background-color: $body-bg;
     border-radius: $border-radius;
     box-shadow: $shadow;
-    
+
     @media (min-width: $screen-md) {
       margin-top: rem(-30px);
     }
@@ -22,7 +22,7 @@
       background-image: url(../img/contacts--desktop--back-right.png), url(../img/contacts--desktop--back-left.png);
       background-position: right top, left bottom;
       background-repeat: no-repeat, no-repeat;
-      
+
       &:after {
         content: '';
         display: block;
@@ -46,7 +46,7 @@
 
   &__item {
     padding: rem(38px) rem(32px) rem(40px);
-    
+
     @media (min-width: $screen-md) {
       padding: rem(60px) rem(60px) rem(64px);
     }
@@ -54,18 +54,18 @@
     @media (min-width: $screen-lg) {
       padding: 0;
     }
-    
+
     &:first-child {
       border-radius: $border-radius $border-radius 0 0;
     }
-    
+
     &:last-child {
       border-radius: 0 0 $border-radius $border-radius;
     }
-    
+
     &--contact {
       background: #ecf2f8;
-      
+
       @media (min-width: $screen-lg) {
         margin-bottom: rem(84px);
         background: transparent;
@@ -82,13 +82,16 @@
 }
 
 @keyframes float {
+
   0% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
+
   50% {
-    transform: translatey(-20px);
+    transform: translateY(-20px);
   }
+
   100% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
 }

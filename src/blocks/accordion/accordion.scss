@@ -7,21 +7,21 @@
   $block-name:                &; // #{$block-name}__element
 
   transition: all $transition-time;
-  
+
   @media (min-width: $screen-md) {
     position: relative;
     padding: rem(24px) rem(76px);
   }
-  
+
   &__header {
     display: flex;
     align-items: flex-start;
     padding: rem(4px) 0;
     outline: none;
     cursor: pointer;
-    
+
     &:hover {
-      
+
       #{$block-name}__arrow {
         color: $color-blue;
         opacity: 1;
@@ -37,7 +37,7 @@
     flex: 0 0 rem(16px);
     min-width: rem(16px);
     margin: 0 rem(16px) 0 rem(2px);
-    
+
     @media (min-width: $screen-md) {
       flex: 0 0 rem(20px);
       min-width: rem(20px);
@@ -52,7 +52,7 @@
   &__title {
     font-weight: 700;
     transition: all $transition-time;
-    
+
     @media (min-width: $screen-md) {
       font-size: $font-size--large;
     }
@@ -60,7 +60,7 @@
 
   &__close {
     display: none;
-    
+
     @media (min-width: $screen-md) {
       position: absolute;
       right: rem(16px);
@@ -72,7 +72,7 @@
     display: none;
     padding-top: rem(4px);
     padding-bottom: rem(4px);
-    
+
     @media (min-width: $screen-md) {
       padding-top: rem(10px);
       padding-bottom: rem(4px);
@@ -82,22 +82,22 @@
   &--active {
     margin-bottom: rem(12px);
     border-radius: rem(5px);
-    
+
     @media (min-width: $screen-md) {
       margin-bottom: rem(16px);
       background: $body-bg--gray;
     }
-    
+
     #{$block-name}__arrow {
       color: $color-blue;
       opacity: 1;
       transform: rotate3d(0, 0, 1, -180deg);
     }
-    
+
     #{$block-name}__title {
       color: $color-blue;
     }
-    
+
     #{$block-name}__close {
 
       @media (min-width: $screen-md) {

@@ -7,11 +7,11 @@
   $block-name:                &; // #{$block-name}__element
 
   margin: 0 0 rem(24px);
-  
+
   @media (min-width: $screen-md) {
     margin-bottom: rem(32px);
   }
-  
+
   &:last-child {
     margin-bottom: 0;
   }
