@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока title, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.title {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-size: $font-size--large;
+  font-weight: 700;
+}

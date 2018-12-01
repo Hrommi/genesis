@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока contacts-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contacts-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    @include row();
+    list-style: none;
+    margin-top: rem(-32px) !important;
+    padding: 0;
+  }
+
+  &__item {
+    @include col();
+    @include col(sm, 6);
+    @include col(lg, 4);
+    margin-top: rem(32px);
+  }
+
+  &--column {
+    
+    #{$block-name}__item {
+      @include col(md, 12);
+      @include col(lg, 12);
+    }
+  }
+}

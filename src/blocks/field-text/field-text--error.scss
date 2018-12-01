@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока field-text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-text {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &--error {
+
+    #{$block-name}__name,
+    #{$block-name}__input,
+    #{$block-name}__help-text {
+      color: $color-main--dark;
+    }
+
+    #{$block-name}__input {
+      border-color: $color-main--dark;
+    }
+  }
+}

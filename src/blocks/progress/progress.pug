@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (progress)
+
+mixin progress(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +progress('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' progress--' + modsList[i].trim();
+      }
+    }
+
+  .progress(class=allMods)&attributes(attributes)
+    .progress__inner!= text

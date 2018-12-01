@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (photos)
+
+mixin photos(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +photos('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' photos--' + modsList[i].trim();
+      }
+    }
+
+  .photos(class=allMods)&attributes(attributes)
+    .photos__inner!= text

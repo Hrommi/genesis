@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (schemes)
+
+mixin schemes(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +schemes('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' schemes--' + modsList[i].trim();
+      }
+    }
+
+  .schemes(class=allMods)&attributes(attributes)
+    .schemes__inner!= text

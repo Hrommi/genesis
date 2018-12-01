@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (tariffs-list)
+
+mixin tariffs-list(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +tariffs-list('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tariffs-list--' + modsList[i].trim();
+      }
+    }
+
+  .tariffs-list(class=allMods)&attributes(attributes)
+    .tariffs-list__inner!= text

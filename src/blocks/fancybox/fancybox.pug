@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (fancybox)
+
+mixin fancybox(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +fancybox('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' fancybox--' + modsList[i].trim();
+      }
+    }
+
+  .fancybox(class=allMods)&attributes(attributes)
+    .fancybox__inner!= text

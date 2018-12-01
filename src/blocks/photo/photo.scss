@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока photo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.photo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border-radius: rem(10px);
+  overflow: hidden;
+  
+  &__link {
+    position: relative;
+    display: block;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba($color-secondary, 0.7) url(../img/photo-search.svg) center center no-repeat;
+      opacity: 0;
+      transition: all $transition-time;
+    }
+    
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  
+  &__image {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (menu)
+
+mixin menu(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +menu('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' menu--' + modsList[i].trim();
+      }
+    }
+
+  .menu(class=allMods)&attributes(attributes)
+    .menu__inner
+      block

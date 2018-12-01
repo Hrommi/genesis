@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (contacts-form)
+
+mixin contacts-form(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +contacts-form('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' contacts-form--' + modsList[i].trim();
+      }
+    }
+
+  .contacts-form(class=allMods)&attributes(attributes)
+    .contacts-form__inner!= text

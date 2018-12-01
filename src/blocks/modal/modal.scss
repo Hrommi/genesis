@@ -1,0 +1,209 @@
+// В этом файле должны быть стили для БЭМ-блока modal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family--headings:       $font-family !default;
+
+$font-size--h4:               rem(18px) !default;
+
+$line-height:                 1.5 !default;
+
+$screen-lg:                   992px !default;
+
+$opacity:                     0.7 !default;
+$transition-time:             0.3s !default;
+
+$z-index-modal:               100 !default;
+
+.js-modal-open {
+  overflow: hidden;
+}
+
+.modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-modal;
+  -webkit-overflow-scrolling: touch;
+
+  .js-modal-open & {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__dialog {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $screen-lg) {
+      width: $screen-lg - 100px;
+      height: auto;
+
+      #{$block-name}--open & {
+        animation: modal-content-show $transition-time 1 both;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 1000px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: rem(10px);
+    background-color: #fff;
+    box-shadow: $shadow--small;
+    outline: 0;
+  }
+
+  &__header {
+    padding: rem(38px) rem(32px) 0;
+    flex-shrink: 0;
+    
+    @media (min-width: $screen-md) {
+      padding: rem(52px) rem(84px) 0;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: rem(16px);
+      border-radius: 50%;
+      background-color: $text-color;
+      
+      @media (min-width: $screen-md) {
+        position: absolute;
+        left: rem(-40px);
+        top: 50%;
+        transform: translate(0, -50%)
+      }
+    }
+  }
+
+  &__close {
+    position: absolute !important; // stylelint-disable-line  declaration-no-important
+    top: rem(16px);
+    right: rem(16px);
+    
+    @media (min-width: $screen-md) {
+      top: rem(28px);
+      right: rem(28px);
+    }
+  }
+
+  &__body {
+    padding: rem(24px) rem(32px);
+    flex-grow: 1;
+    
+    @media (min-width: $screen-md) {
+      padding: rem(32px) rem(84px);
+    }
+  }
+
+  &__footer {
+    padding: 0 rem(32px) rem(40px);
+    flex-shrink: 0;
+    
+    @media (min-width: $screen-md) {
+      padding: 0 rem(84px) rem(64px);
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ($z-index-modal - 1);
+    background-color: rgba($backdrop-bg, 0.8);
+
+    @media (min-width: $screen-lg) {
+      animation: modal-backdrop-show $transition-time 1;
+    }
+  }
+
+  &--open {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--green {
+
+    #{$block-name}__heading:before {
+      background-color: $color-green;
+    }
+  }
+
+  &--blue {
+
+    #{$block-name}__heading:before {
+      background-color: $color-blue;
+    }
+  }
+
+  &--orange {
+
+    #{$block-name}__heading:before {
+      background-color: $color-orange;
+    }
+  }
+
+  &--pink {
+
+    #{$block-name}__heading:before {
+      background-color: $color-pink;
+    }
+  }
+}
+
+
+
+@keyframes modal-backdrop-show {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-show {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

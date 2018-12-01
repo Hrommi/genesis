@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока conditions-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.conditions-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    @include row();
+    list-style: none;
+    margin-top: rem(-40px) !important;
+    padding: 0;
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 6);
+    margin-top: rem(40px);
+  }
+}

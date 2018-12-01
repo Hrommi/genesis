@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (accordion-list)
+
+mixin accordion-list(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +accordion-list('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' accordion-list--' + modsList[i].trim();
+      }
+    }
+
+  .accordion-list(class=allMods)&attributes(attributes)
+    .accordion-list__inner!= text

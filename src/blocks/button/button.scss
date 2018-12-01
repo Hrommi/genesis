@@ -1,0 +1,175 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+
+
+.button {
+
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: $field-padding-vertical  $field-padding-horizontal;
+  white-space: nowrap;
+  user-select: none;
+  text-align: center;
+  font-size: $font-size--small;
+  font-weight: 700;
+  font-family: inherit;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  color: $text-color--invert;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  border: 2px solid $color-main;
+  background-color: $color-main;
+  background-image: none;
+  box-shadow: 0 5px 7px rgba($color-main--dark, 0.6);
+  transition: all $transition-time;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $text-color--invert;
+    background-color: $color-main--dark;
+    border-color: $color-main--dark;
+  }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    cursor: not-allowed !important;
+    color: $text-color--invert !important;
+    background-color: $color-main--light !important;
+    border-color: $color-main--light !important;
+    box-shadow: none !important;
+
+    @at-root a.button--disabled {
+      pointer-events: none;
+    }
+  }
+
+  &--outline {
+    color: $color-main;
+    background-color: transparent;
+    border: 2px solid rgba($color-main--light, 0.22);
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+      background-color: transparent;
+      border-color: $color-main;
+      box-shadow: none;
+    }
+
+    &#{$block-name}--disabled,
+    &:disabled {
+      color: rgba($color-main--light, 0.22) !important;
+      background-color: transparent !important;
+      border-color: rgba($color-main--light, 0.22) !important;
+    }
+  }
+
+  &--outline-invert {
+    color: $text-color--invert;
+    background-color: transparent;
+    border: 2px solid rgba($text-color--invert, 0.22);
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $text-color--invert;
+      background-color: transparent;
+      border-color: $text-color--invert;
+      box-shadow: none;
+    }
+
+    &#{$block-name}--disabled,
+    &:disabled {
+      color: rgba($text-color--invert, 0.22) !important;
+      background-color: transparent !important;
+      border-color: rgba($text-color--invert, 0.22) !important;
+    }
+  }
+
+  &--outline-dark {
+    color: $text-color;
+    background-color: transparent;
+    border: 2px solid $body-bg--gray;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $text-color ;
+      background-color: $body-bg--gray;
+      border-color: $body-bg--gray;
+      box-shadow: none;
+    }
+
+    &#{$block-name}--disabled,
+    &:disabled {
+      color: rgba($body-bg--gray, 0.22) !important;
+      background-color: transparent !important;
+      border-color: rgba($body-bg--gray, 0.22) !important;
+    }
+  }
+
+  &--point {
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: rem(8px);
+      border-radius: 50%;
+      background-color: $text-color;
+    }
+
+    &#{$block-name}--green {
+
+      &:before {
+        background-color: $color-green;
+      }
+    }
+
+    &#{$block-name}--blue {
+
+      &:before {
+        background-color: $color-blue;
+      }
+    }
+
+    &#{$block-name}--orange {
+
+      &:before {
+        background-color: $color-orange;
+      }
+    }
+
+    &#{$block-name}--pink {
+
+      &:before {
+        background-color: $color-pink;
+      }
+    }
+  }
+
+  // &__icon {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+
+
+
+}

@@ -1,0 +1,96 @@
+// В этом файле должны быть стили для БЭМ-блока contact, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contact {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__media {
+    align-self: flex-start;
+    flex: 0 0 rem(32px);
+    min-width: rem(32px);
+    margin-right: rem(16px);
+    border-radius: 50%;
+    
+    @media (min-width: $screen-lg) {
+      align-self: flex-end;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__content {
+    margin-top: rem(4px);
+    margin-bottom: rem(4px);
+  }
+
+  &__text {
+    margin-bottom: rem(8px) !important;
+  }
+
+
+
+  &--green {
+
+    #{$block-name}__media {
+      color: $color-green;
+      background: $body-green;
+    }
+  }
+
+  &--blue {
+    
+    #{$block-name}__media {
+      color: $color-blue;
+      background: $body-blue;
+    }
+  }
+
+  &--orange {
+    
+    #{$block-name}__media {
+      color: $color-orange;
+      background: $body-orange;
+    }
+  }
+
+  &--pink {
+
+    #{$block-name}__media {
+      color: $color-pink;
+      background: $body-pink;
+    }
+  }
+
+  &--invert {
+    
+    #{$block-name}__media {
+      box-shadow: inset 0 0 1px rgba($text-color--invert, 0.3);
+      color: $text-color--invert;
+    }
+    
+    #{$block-name}__text {
+      color: $text-color--menu;
+    }
+    
+    #{$block-name}__title {
+
+      a {
+        color: $text-color--invert;
+        
+        &:hover {
+          color: $text-color--invert;
+        }
+      }
+    }
+  }
+}

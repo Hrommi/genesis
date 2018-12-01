@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока photos-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.photos-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    @include row();
+    list-style: none;
+    margin-top: rem(-20px) !important;
+    padding: 0;
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 4);
+    margin-top: rem(20px);
+  }
+}

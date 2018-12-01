@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока schemes, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.schemes {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__heading + &__text {
+    margin-top: rem(-16px);
+    
+    @media (min-width: $screen-md) {
+      margin-top: rem(-24px);
+    }
+  }
+
+  &__heading {
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: rem(80px);
+      text-align: center;
+    }
+  }
+}

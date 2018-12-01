@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (lead)
+
+mixin lead(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +lead('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' lead--' + modsList[i].trim();
+      }
+    }
+
+  .lead(class=allMods)&attributes(attributes)
+    .lead__inner!= text

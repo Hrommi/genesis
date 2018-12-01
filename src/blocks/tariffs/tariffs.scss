@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока tariffs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tariffs {
+
+  $block-name:                &; // #{$block-name}__element
+
+  overflow-x: hidden;
+
+  &__heading {
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+  }
+}

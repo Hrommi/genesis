@@ -1,0 +1,114 @@
+// В этом файле должны быть стили для БЭМ-блока tariff, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tariff {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  padding: rem(38px) rem(32px) rem(40px);
+  background-color: $body-bg;
+  border-radius: $border-radius;
+  box-shadow: $shadow--small;
+  transition: all $transition-time;
+  
+  @media (min-width: $screen-md) {
+    width: rem(556px);
+    padding: rem(60px) rem(84px) rem(64px);
+    box-shadow: none;
+    
+    .center & {
+      box-shadow: $shadow--small;
+    }
+  }
+  
+  &__content {
+    margin-bottom: rem(14px);
+    
+  @media (min-width: $screen-md) {
+      margin-bottom: rem(34px);
+    }
+  }
+  
+  &__title {
+    margin-bottom: rem(18px);
+    
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: rem(16px);
+      border-radius: 50%;
+      background-color: $text-color;
+      
+      @media (min-width: $screen-md) {
+        position: absolute;
+        left: rem(40px);
+        top: rem(34px);
+      }
+    }
+  }
+  
+  &__text {
+    margin-bottom: rem(14px);
+  }
+
+  &__footer {
+    
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      > * {
+        margin: 0;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: rem(24px);
+    font-size: rem(24px);
+  }
+
+  &__buttons-group {
+    
+    @media (min-width: $screen-md) {
+      order: -1;
+    }
+  }
+
+  &--green {
+    background-color: $body-green;
+
+    #{$block-name}__title:before {
+      background-color: $color-green;
+    }
+  }
+
+  &--blue {
+    background-color: $body-blue;
+
+    #{$block-name}__title:before {
+      background-color: $color-blue;
+    }
+  }
+
+  &--orange {
+    background-color: $body-orange;
+
+    #{$block-name}__title:before {
+      background-color: $color-orange;
+    }
+  }
+
+  &--pink {
+    background-color: $body-pink;
+
+    #{$block-name}__title:before {
+      background-color: $color-pink;
+    }
+  }
+}

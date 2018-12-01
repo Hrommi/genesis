@@ -1,0 +1,66 @@
+// В этом файле должны быть стили для БЭМ-блока close, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.close {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 0;
+  width: rem(16px);
+  line-height: rem(16px);
+  background: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  transition: all $transition-time;
+  opacity: $opacity;
+  color: $text-color--muted;
+  
+  @media (min-width: $screen-md) {
+    width: rem(20px);
+    line-height: rem(20px);
+  }
+  
+  &:hover,
+  &:focus {
+    color: $color-blue;
+    opacity: 1;
+  }
+
+  > span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: $toggler-part-height;
+    font-size: 0;
+    color: inherit;
+    background: transparent;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $toggler-part-height;
+      border-radius: 2px;
+      background: currentColor;
+      transform-origin: 50% 50%;
+    }
+
+    &:before {
+      transform: rotate3d(0, 0, 1, 45deg);
+    }
+
+    &:after {
+      transform: rotate3d(0, 0, 1, -45deg);
+    }
+  }
+}

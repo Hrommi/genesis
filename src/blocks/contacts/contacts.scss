@@ -1,0 +1,94 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    position: relative;
+    margin: rem(-16px) ($grid-gutter-width / -2) 0;
+    background-color: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    
+    @media (min-width: $screen-md) {
+      margin-top: rem(-30px);
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: rem(60px) rem(60px) rem(64px);
+      background-image: url(../img/contacts--desktop--back-right.png), url(../img/contacts--desktop--back-left.png);
+      background-position: right top, left bottom;
+      background-repeat: no-repeat, no-repeat;
+      
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 68px;
+        top: -44px;
+        width: 134px;
+        height: 175px;
+        background: url(../img/contacts--box.png) center center no-repeat;
+        animation: float 6s ease-in-out infinite;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-left: rem(-56px);
+      margin-right: rem(-56px);
+      padding-left: rem(200px);
+      padding-right: rem(200px);
+    }
+  }
+
+  &__item {
+    padding: rem(38px) rem(32px) rem(40px);
+    
+    @media (min-width: $screen-md) {
+      padding: rem(60px) rem(60px) rem(64px);
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 0;
+    }
+    
+    &:first-child {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+    
+    &:last-child {
+      border-radius: 0 0 $border-radius $border-radius;
+    }
+    
+    &--contact {
+      background: #ecf2f8;
+      
+      @media (min-width: $screen-lg) {
+        margin-bottom: rem(84px);
+        background: transparent;
+      }
+    }
+  }
+
+  &__heading {
+
+    @media (min-width: $screen-lg) {
+      margin-top: rem(-8px);
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

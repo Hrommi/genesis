@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока fancybox, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.fancybox {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &-bg {
+    background-color: $backdrop-bg;
+    
+    #{$block-name}-is-open {
+      opacity: 0.8;
+    }
+  }
+}

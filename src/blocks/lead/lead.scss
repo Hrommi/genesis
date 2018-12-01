@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока lead, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.lead {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-size: rem(20px);
+  
+  @media (min-width: $screen-md) {
+    font-size: rem(24px);
+  }
+}
